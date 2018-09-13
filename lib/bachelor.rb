@@ -48,7 +48,6 @@ def get_average_age_for_season(data, season)
   contestants_ages = 0
   data.each do |seasons, contestants|
   if seasons == season
-    binding.pry
     puts "kjsk"
   end
 end
