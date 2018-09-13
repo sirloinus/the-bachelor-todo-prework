@@ -45,10 +45,11 @@ def get_occupation(data, hometown)
 end
 
 def get_average_age_for_season(data, season)
-  contestants_ages = 0
+  contestants_ages = []
   data.each do |seasons, contestants|
   if seasons == season
-    puts "kjsk"
+    contestants.each do |contestant|
+      contestant[""]
   end
 end
 end
