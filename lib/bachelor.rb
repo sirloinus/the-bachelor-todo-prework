@@ -1,17 +1,22 @@
+require 'pry'
+
 def get_first_name_of_season_winner(data, season)
-  data.each do |tv_season, contestants|
-    if tv_season == season
-      if contestants['status'] = 'Winner'
-        contestant_name = contestants['name']
-        contestant_name.split.first
+  data[season].each do |contestant|
+      if contestant["status"] == 'Winner'
+        contestant_name = contestant['name']
+        return contestant_name.split.first
       end
     end
   end
-  contestant_name
-end
 
 def get_contestant_name(data, occupation)
-  # code here
+  data.each do |season, contestants|
+    contestants.each do |contestant|
+      if contestant["occupation"] == occupation
+        return contestant["name"]
+      end
+    end
+  end
 end
 
 def count_contestants_by_hometown(data, hometown)
