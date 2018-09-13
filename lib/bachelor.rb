@@ -54,5 +54,7 @@ def get_average_age_for_season(data, season)
     end
   end
   number_of_contestants = contestants_ages.length 
-  
+  total_ages = contestants_ages.inject(0, :+)
+  average_age = total_ages/number_of_contestants
+  average_age
 end
